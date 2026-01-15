@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BokBocken - Varukorg</title>
+  <meta name="description" content="Din varukorg hos BokBocken – se dina valda begagnade böcker och gå till betalning.">
+
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="bilder/favicon.png">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="bilder/favicon.ico">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Huvudnavigation">
+
+      <a href="index.html" class="logo">
+        <img src="bilder/logo.svg" alt="BokBocken – logotyp" width="180" height="80">
+      </a>
+
+      <a href="index.html" class="site-title">BOKBOCKEN</a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Öppna meny">
+        ☰
+      </button>
+
+      <ul class="nav-list" id="main-menu">
+        <li><a href="products.html">Böcker</a></li>
+        <li><a href="about.html">Om BokBocken</a></li>
+        <li><a href="cart.html">Varukorg</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="cart-page">
+      <h1>Din varukorg</h1>
+
+      <div class="cart-container">
+
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Produkt</th>
+              <th>Pris</th>
+              <th>Ta bort</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="product-info">
+                <img src="bilder/bok1.jpg" alt="Edgar Allan Poe: Complete Tales & Poems" width="60" height="80">
+                <span>Edgar Allan Poe: Complete Tales & Poems – Edgar Allan Poe</span>
+              </td>
+              <td>349 kr</td>
+              <td><button class="remove-btn" aria-label="Ta bort Edgar Allan Poe">✕</button></td>
+            </tr>
+
+            <tr>
+              <td class="product-info">
+                <img src="bilder/bok2.jpg" alt="Brave New World" width="60" height="80">
+                <span>The Wes Anderson Collection – Aldous Huxley</span>
+              </td>
+              <td>29 kr</td>
+              <td><button class="remove-btn" aria-label="Ta bort Brave New World">✕</button></td>
+            </tr>
+
+            <tr>
+              <td class="product-info">
+                <img src="bilder/bok3.jpg" alt="The Ultimate Hitchhiker's Guide To The Galaxy" width="60" height="80">
+                <span>The Ultimate Hitchhiker's Guide To The Galaxy – Douglas Adams</span>
+              </td>
+              <td>449 kr</td>
+              <td><button class="remove-btn" aria-label="Ta bort The Ultimate Hitchhiker's Guide To The Galaxy">✕</button></td>
+            </tr>
+
+            <tr>
+              <td class="product-info" colspan="2"><strong>Frakt</strong></td>
+              <td>49 kr</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <div class="cart-summary">
+          <p class="total">Totalt: <strong>876 kr</strong></p>
+        </div>
+
+<a href="products.html" class="btn">Tillbaka till böcker</a>
+<a href="#" class="btn checkout-btn">Gå till betalning</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 BokBocken</p>
+  </footer>
+
+  <!-- Hamburgermeny -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-list');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

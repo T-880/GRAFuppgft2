@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BokBocken - Om Oss</title>
+  <meta name="description" content="Om BokBocken – information om webbplatsen och utvecklaren Jonas Jonasson.">
+
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="bilder/favicon.png">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="bilder/favicon.ico">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Huvudnavigation">
+      <a href="index.html" class="logo">
+        <img src="bilder/logo.svg" alt="BokBocken – logotyp" width="180" height="80">
+      </a>
+      <a href="index.html" class="site-title">BOKBOCKEN</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Öppna meny">☰</button>
+      <ul class="nav-list" id="main-menu">
+        <li><a href="products.html">Böcker</a></li>
+        <li><a href="about.html">Om BokBocken</a></li>
+        <li><a href="cart.html">Varukorg</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" class="about-page" style="padding:2rem 1rem; max-width:800px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:1rem;">
+      <img src="bilder/frilagd.png" alt="Bild på en gammal bok" width="310" height="auto" fetchpriority="high">
+    </div>
+
+    <section class="about-box">
+      <h2>Om webbplatsen</h2>
+      <p>BokBocken är en webbplats där du kan köpa begagnade böcker online.
+        Vi erbjuder ett brett sortiment av klassiker och moderna titlar,
+        alla tillgängliga direkt hem till dig. Vår vision är att göra läsning tillgängligt och hållbart för alla,
+        genom att ge böcker ett nytt liv.</p>
+    </section>
+
+    <section class="about-box">
+      <h2>Om utvecklaren</h2>
+      <p>Webbplatsen är skapad av Jonas Jonasson, student i webbutveckling i Uppsala.
+        Jonas har byggt BokBocken som ett projekt för att öva moderna webbutvecklingstekniker,
+        inklusive HTML, CSS, responsiv design och användarvänliga gränssnitt.</p>
+      <p>Syftet med sidan är att kombinera praktiska färdigheter med en estetiskt tilltalande och användarvänlig
+        e-handelsupplevelse.</p>
+    </section>
+
+    <section style="margin-top:2rem; text-align:center;">
+      <a href="index.html" class="btn">Till startsidan</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 BokBocken</p>
+  </footer>
+
+  <!-- Hamburgermeny -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-list');
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+
+</html>

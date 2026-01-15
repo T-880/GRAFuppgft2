@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BokBocken - Android Karenina</title>
+    <meta name="description" content="Android Karenina av Ben H. Winters – begagnad bok till salu på BokBocken.">
+
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+    </noscript>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="bilder/favicon.png">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="bilder/favicon.ico">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Huvudnavigation">
+            <a href="index.html" class="logo">
+                <img src="bilder/logo.svg" alt="BokBocken – logotyp" width="180" height="80">
+            </a>
+            <a href="index.html" class="site-title">BOKBOCKEN</a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu"
+                aria-label="Öppna meny">☰</button>
+            <ul class="nav-list" id="main-menu">
+                <li><a href="products.html">Böcker</a></li>
+                <li><a href="about.html">Om BokBocken</a></li>
+                <li><a href="cart.html">Varukorg</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="product-page">
+
+        <section class="product-detail">
+
+            <div class="product-image">
+                <picture>
+                    <source srcset="bilder/bok5.webp" type="image/webp" fetchpriority="high">
+                    <img src="bilder/bok5.jpg" alt="Android Karenina (2010)" id="main-product-img" fetchpriority="high">
+                </picture>
+            </div>
+
+            <div class="product-info">
+                <h1>Android Karenina (2010, Pocket)</h1>
+
+                <p class="author">
+                    <strong>Författare:</strong><br>
+                    Ben H. Winters
+                </p>
+
+                <p class="condition">
+                    <strong>Skick:</strong><br>
+                    Dåligt
+                </p>
+
+                <p class="price">
+                    <strong>Pris:</strong><br>
+                    69 kr
+                </p>
+
+                <p class="description">
+                    <strong>Beskrivning:</strong><br>
+                    En kreativ och modern tolkning av Leo Tolstojs klassiska roman
+                    <em>Anna Karenina</em>, där handlingen flyttas till en futuristisk värld
+                    med android-teknologi. Boken utforskar frågor om mänsklighet, känslor
+                    och teknologi, och kombinerar romantik, drama och science fiction på ett
+                    spännande och annorlunda sätt.
+                </p>
+
+                <a href="cart.html" class="btn">Lägg i varukorg</a>
+            </div>
+
+        </section>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+
+        <section class="related-products">
+            <h2>Liknande böcker</h2>
+
+            <div class="grid">
+                <div class="product-card">
+                    <a href="product1.html">
+                        <picture>
+                            <source srcset="bilder/bok1.webp" type="image/webp">
+                            <img src="bilder/bok1.jpg" alt="Edgar Allan Poe: Complete Tales & Poems" loading="lazy">
+                        </picture>
+                    </a>
+                    <h2>Edgar Allan Poe: Complete Tales & Poems (2002)</h2>
+                    <p class="binding">Inbunden</p>
+                    <p class="price"><span class="price-text">Pris: 349 kr</span></p>
+                    <a href="product1.html" class="btn">Se produkt</a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product2.html">
+                        <picture>
+                            <source srcset="bilder/bok2.webp" type="image/webp">
+                            <img src="bilder/bok2.jpg" alt="Brave New World" loading="lazy">
+                        </picture>
+                    </a>
+                    <h2>Brave New World (1991)</h2>
+                    <p class="binding">Pocket</p>
+                    <p class="price"><span class="price-text">Pris: 29 kr</span></p>
+                    <a href="product2.html" class="btn">Se produkt</a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product3.html">
+                        <picture>
+                            <source srcset="bilder/bok3.webp" type="image/webp">
+                            <img src="bilder/bok3.jpg" alt="The Ultimate Hitchhiker's Guide To The Galaxy"
+                                loading="lazy">
+                        </picture>
+                    </a>
+                    <h2>The Ultimate Hitchhiker's Guide To The Galaxy (2010)</h2>
+                    <p class="binding">Inbunden</p>
+                    <p class="price"><span class="price-text">Pris: 449 kr</span></p>
+                    <a href="product3.html" class="btn">Se produkt</a>
+                </div>
+
+                <div class="product-card">
+                    <a href="product4.html">
+                        <picture>
+                            <source srcset="bilder/bok4.webp" type="image/webp">
+                            <img src="bilder/bok4.jpg" alt="Mästaren Och Margarita" loading="lazy">
+                        </picture>
+                    </a>
+                    <h2>Mästaren Och Margarita (1982)</h2>
+                    <p class="binding">Pocket</p>
+                    <p class="price"><span class="price-text">Pris: 49 kr</span></p>
+                    <a href="product4.html" class="btn">Se produkt</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 BokBocken</p>
+    </footer>
+
+    <!-- Hamburgermeny -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.nav-list');
+
+        toggle.addEventListener('click', () => {
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('show');
+        });
+    </script>
+
+    <script>
+        const mainImg = document.getElementById('main-product-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox .close');
+
+        mainImg.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = mainImg.src;
+            lightboxImg.alt = mainImg.alt;
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', e => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

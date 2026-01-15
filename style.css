@@ -1,0 +1,562 @@
+/* Grafisk profil */
+:root {
+  --color-bg: #faf9f6;
+  --color-text: #1f1f1f;
+  --color-primary: #2f4f3e;
+  --color-accent: #9c3a2e;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky footer – layout */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tillgänglighet */
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+/* Header / Navigation */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* Exakt centrerad titel */
+.site-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  text-decoration: underline;
+}
+
+/* Hamburgermeny */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  flex: 1;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* Hero text/logotyp */
+.hero-text {
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.hero-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-logo {
+  max-width: min(70vw, 420px);
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+/* Knappar */
+.btn {
+  display: inline-flex;              
+  align-items: center;               
+  justify-content: center;           
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--color-accent);
+}
+
+/* Footer */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Produktkort */
+.products-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.products-page .product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.products-page .product-card:hover {
+  transform: translateY(-5px);
+}
+
+.products-page .product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.products-page .product-card h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.products-page .product-card p {
+  font-size: 0.9rem;
+}
+
+/* Specifik produkt */
+.product-page {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-page .product-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: stretch;              
+}
+
+.product-page .product-detail img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  height: 100%;                      
+}
+
+.product-page .product-image {
+  flex: 0 0 400px;                   
+  display: flex;                     
+}
+
+.product-page .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-page .product-info h1 {
+  font-size: 1.8rem;
+}
+
+.product-page .product-info p {
+  font-size: 1rem;
+}
+
+.product-page .product-info .btn {
+  max-width: 200px;
+}
+
+/* Relaterade produkter – exakt som products.html */
+.related-products {
+  margin-top: 2rem;
+}
+
+.related-products .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.related-products .product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.related-products .product-card:hover {
+  transform: translateY(-5px);
+}
+
+.related-products .product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.related-products .product-card h2 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.related-products .product-card p.price {
+  font-size: 1.0rem;
+}
+
+.related-products .product-card .btn {
+  margin-top: 0.75rem;
+  display: inline-block;
+}
+
+/* Ta bort gamla regler som förstör layouten */
+.related-products .product-grid,
+.related-products .product-card {
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Varukorgssida */
+.cart-page {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cart-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cart-table th {
+  background-color: var(--color-bg);
+}
+
+.cart-table .product-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-table .product-info img {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 0.25rem;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-accent);
+  
+}
+
+.remove-btn:hover,
+.remove-btn:focus {
+  color: var(--color-primary);
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cart-summary .total {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.checkout-btn {
+  padding: 0.75rem 1.5rem;
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    min-width: 180px;
+    z-index: 1000;
+  }
+
+  .nav-list li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .logo img {
+    height: 34px;
+  }
+
+  /* Varukorgstabell mobil */
+  .cart-table th,
+  .cart-table td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .cart-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Produkt-sida mobil */
+  .product-page .product-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-page .product-info {
+    width: 100%;
+  }
+
+  .product-page .product-detail img {
+    height: auto;
+  }
+}
+
+/* Centrera alla h1 */
+h1 {
+  text-align: center;
+}
+
+/* About-page boxar – som produktkort */
+.about-page .about-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.about-page .about-box:hover {
+  transform: translateY(-3px);
+}
+
+.about-page .about-box h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-page .about-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Lightbox overlay för produkt bilder*/
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10001;
+  user-select: none;
+}
+
+/* Pris */
+.binding {
+  margin: 0.3rem 0 0.2rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.price .price-text {
+  font-size: 1.2rem !important;
+  color: #222;
+  margin: 0;
+  display: inline-block;
+}
+
+/* Knapp under beskrivning centrerad på produkt-sidan */
+.product-page .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-page .product-info .btn {
+  max-width: 200px;      
+  margin-top: 1rem;     
+  align-self: center;     
+  display: inline-flex;
+  justify-content: center; 
+}
