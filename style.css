@@ -15,17 +15,16 @@
   padding: 0;
 }
 
-/* Stäng av scrollning ENDAST på index-sidan */
+/* Stäng av scrollning på indexsidan */
 body.no-scroll, html.no-scroll {
-  overflow: hidden;  /* Förhindrar scrollning på index-sidan */
+  overflow: hidden;  
 }
 
-/* Resten av din tidigare CSS */
 html, body {
   height: 100%;
 }
 
-/* Sticky Header – layout */
+/* Sticky Header */
 body {
   display: flex;
   flex-direction: column;
@@ -39,7 +38,7 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 0px;  /* Ta bort padding-top som stör */
+  padding-top: 0px;  
 }
 
 /* Tillgänglighet */
@@ -57,14 +56,14 @@ main {
   z-index: 1000;
 }
 
-/* Header / Navigation */
+/* Header + Navigation */
 .site-header {
   background: #fff;
   border-bottom: 1px solid #ddd;
-  position: sticky;  /* Gör headern sticky */
-  top: 0;           /* Gör att den fastnar högst upp */
-  z-index: 1000;    /* Gör att den ligger ovanpå andra element */
-  width: 100%;      /* Se till att headern täcker hela bredden */
+  position: sticky;  
+  top: 0;           
+  z-index: 1000;    
+  width: 100%;      
 }
 
 .nav {
@@ -125,10 +124,10 @@ main {
 .hero {
   position: relative;
   flex: 1;
-  min-height: calc(100vh - 60px);  /* Justera höjden för att ta hänsyn till den sticky headern */
+  min-height: calc(100vh - 60px);  
   display: flex;
-  align-items: center;  /* Vertikalt centrera */
-  justify-content: center;  /* Horisontellt centrera */
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: #fff;
 }
@@ -147,11 +146,6 @@ main {
 .hero-text {
   max-width: 600px;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* Horisontellt centrera alla element i hero-text */
-  justify-content: center;  /* För att alltid vara centrerad vertikalt */
-  text-align: center;
 }
 
 .hero-branding {
@@ -165,12 +159,6 @@ main {
   max-width: min(70vw, 420px);
   height: auto;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
-}
-
-.hero-tagline {
-  font-size: 1.1rem;
-  letter-spacing: 0.05em;
-  color: #000;
 }
 
 /* Knappar */
@@ -197,9 +185,9 @@ main {
   border-top: 1px solid #ddd;
   padding: 1rem;
   text-align: center;
-    position: sticky;  /* Lägg till detta */
-  bottom: 0;         /* Lägg till detta för att hålla footern längst ner */
-  width: 100%;       /* Säkerställ att den täcker hela bredden */
+    position: sticky;  
+  bottom: 0;         
+  width: 100%;       
 }
 
 /* Produktkort */
@@ -284,7 +272,7 @@ main {
   max-width: 200px;
 }
 
-/* Relaterade produkter – exakt som products.html */
+/* Relaterade produkter */
 .related-products {
   margin-top: 2rem;
 }
@@ -446,13 +434,31 @@ input[type="number"] {
     display: flex;
   }
 
+  /* Logo och knapp just */
   .hero {
-    min-height: 100vh;
+    min-height: 100vh; 
   }
 
-  .logo img {
-    height: 34px;
+  .hero-text {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%; 
+    margin-top: 10vh; 
+    transform: translateY(15%); /* Justering av specifik postion av logo och knapp på mobil i Y-led */
   }
+
+  .hero-logo {
+    max-width: 70vw;
+    height: auto;
+  }
+
+  .btn {
+    margin-top: 1rem; 
+  }
+
 
   /* Varukorgstabell mobil */
   .cart-table th,
@@ -491,7 +497,7 @@ h1 {
   text-align: center;
 }
 
-/* About-page boxar – som produktkort */
+/* About-page boxar */
 .about-page .about-box {
   background: #fff;
   border: 1px solid #ddd;
@@ -564,7 +570,7 @@ h1 {
   display: inline-block;
 }
 
-/* Knapp under beskrivning centrerad på produkt-sidan */
+/* Knapp under beskrivning centrerad på produktsida */
 .product-page .product-info {
   display: flex;
   flex-direction: column;
