@@ -185,7 +185,7 @@ main {
   border-top: 1px solid #ddd;
   padding: 1rem;
   text-align: center;
-    position: sticky;  
+  position: sticky;  
   bottom: 0;         
   width: 100%;       
 }
@@ -376,7 +376,6 @@ input[type="number"] {
   font-size: 1.2rem;
   cursor: pointer;
   color: var(--color-accent);
-  
 }
 
 .remove-btn:hover,
@@ -403,92 +402,21 @@ input[type="number"] {
 
 /* Responsivitet */
 @media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-list {
-    position: absolute;
-    top: 100%;
-    right: 1rem;
-    background: #fff;
-    border: 1px solid #ddd;
-    flex-direction: column;
-    gap: 0;
-    display: none;
-    min-width: 180px;
-    z-index: 1000;
-  }
-
-  .nav-list li {
-    border-bottom: 1px solid #eee;
-  }
-
-  .nav-list a {
-    display: block;
-    padding: 0.75rem 1rem;
-  }
-
-  .nav-list.show {
-    display: flex;
-  }
-
-  /* Logo och knapp just */
-  .hero {
-    min-height: 100vh; 
-  }
-
-  .hero-text {
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%; 
-    margin-top: 10vh; 
-    transform: translateY(15%); /* Justering av specifik postion av logo och knapp på mobil i Y-led */
-  }
-
-  .hero-logo {
-    max-width: 70vw;
-    height: auto;
-  }
-
-  .btn {
-    margin-top: 1rem; 
-  }
-
-
-  /* Varukorgstabell mobil */
-  .cart-table th,
-  .cart-table td {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-
-  .cart-summary {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .checkout-btn {
+  /* För att ge båda knapparna full bredd på mobilskärmar */
+  .cart-page .btn {
     width: 100%;
     text-align: center;
   }
 
-  /* Produkt-sida mobil */
-  .product-page .product-detail {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-page .product-info {
+  /* Ge knapparna samma storlek som "Gå till betalning" */
+  .checkout-btn {
     width: 100%;
   }
-
-  .product-page .product-detail img {
-    height: auto;
+  
+  /* Ge tabellen mer luft i prisrutorna */
+  .cart-table th, 
+  .cart-table td {
+    padding: 1rem;  /* Justera padding för att skapa mer luft */
   }
 }
 
@@ -522,7 +450,7 @@ h1 {
   line-height: 1.6;
 }
 
-/* Lightbox overlay för produkt bilder*/
+/* Lightbox overlay för produkt bilder */
 .lightbox {
   display: none;
   position: fixed;
