@@ -595,3 +595,20 @@ h1 {
   white-space: nowrap;
   border: 0;
 }
+
+/* Responsivitet för mobilläge */
+@media (max-width: 768px) {
+  
+  /* Knapparna "Tillbaka till böcker" och "Gå till betalning" ska ha samma storlek i mobilläge */
+  .checkout-btn,
+  .cart-page .btn {
+    width: 100%;  /* Gör båda knapparna lika stora och täcker hela bredden på mobilskärmen */
+    text-align: center;
+  }
+  
+  /* Ge tabellen mer luft i prisrutorna */
+  .cart-table th, 
+  .cart-table td {
+    padding: 0.5rem;  /* Öka padding för att ge mer luft */
+  }
+}
