@@ -127,8 +127,8 @@ main {
   flex: 1;
   min-height: calc(100vh - 60px);  /* Justera höjden för att ta hänsyn till den sticky headern */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;  /* Vertikalt centrera */
+  justify-content: center;  /* Horisontellt centrera */
   text-align: center;
   color: #fff;
 }
@@ -147,6 +147,11 @@ main {
 .hero-text {
   max-width: 600px;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Horisontellt centrera alla element i hero-text */
+  justify-content: center;  /* För att alltid vara centrerad vertikalt */
+  text-align: center;
 }
 
 .hero-branding {
@@ -160,6 +165,12 @@ main {
   max-width: min(70vw, 420px);
   height: auto;
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: #000;
 }
 
 /* Knappar */
