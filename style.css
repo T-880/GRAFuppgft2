@@ -15,12 +15,17 @@
   padding: 0;
 }
 
-/* Sticky footer – layout */
-html,
-body {
+/* Stäng av scrollning ENDAST på index-sidan */
+body.no-scroll, html.no-scroll {
+  overflow: hidden;  /* Förhindrar scrollning på index-sidan */
+}
+
+/* Resten av din tidigare CSS */
+html, body {
   height: 100%;
 }
 
+/* Sticky Header – layout */
 body {
   display: flex;
   flex-direction: column;
@@ -34,6 +39,7 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-top: 0px;  /* Ta bort padding-top som stör */
 }
 
 /* Tillgänglighet */
@@ -55,6 +61,10 @@ main {
 .site-header {
   background: #fff;
   border-bottom: 1px solid #ddd;
+  position: sticky;  /* Gör headern sticky */
+  top: 0;           /* Gör att den fastnar högst upp */
+  z-index: 1000;    /* Gör att den ligger ovanpå andra element */
+  width: 100%;      /* Se till att headern täcker hela bredden */
 }
 
 .nav {
@@ -115,7 +125,7 @@ main {
 .hero {
   position: relative;
   flex: 1;
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 60px);  /* Justera höjden för att ta hänsyn till den sticky headern */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,15 +162,9 @@ main {
   filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
 }
 
-.hero-tagline {
-  font-size: 1.1rem;
-  letter-spacing: 0.05em;
-  color: #000;
-}
-
 /* Knappar */
 .btn {
-  display: inline-flex;              
+  display: inline-flex;               
   align-items: center;               
   justify-content: center;           
   margin-top: 1rem;
@@ -182,6 +186,9 @@ main {
   border-top: 1px solid #ddd;
   padding: 1rem;
   text-align: center;
+    position: sticky;  /* Lägg till detta */
+  bottom: 0;         /* Lägg till detta för att hålla footern längst ner */
+  width: 100%;       /* Säkerställ att den täcker hela bredden */
 }
 
 /* Produktkort */
